@@ -30,9 +30,7 @@ int main()
   int num = 92;
   for(int i = 0; i <= num; i++)
   {
-    FibanaciNumber res = getFibNum(i, a);
-    std::cout << "(" << res.index << ")" << res.number << std::endl;
+    getFibNum(i, a);
   }
-  //std::cout << a.getNumber();
   std::cout << std::endl;
 }
