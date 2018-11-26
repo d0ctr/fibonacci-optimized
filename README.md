@@ -1,6 +1,6 @@
 # Optimized recursive way to get Fibanacci's numbers
 
-The tiniest way to get Fibanacci's number by the index is recursive functions6 but also it is very time consuming even with thehighest level of optimisation.
+The tiniest way to get Fibanacci's number by the index is recursive functions but also it is very time consuming even with the highest level of optimisation.
 
 # Idea of overcoming lack of time
 
@@ -15,7 +15,7 @@ To create object and executable files for the optimesed recursive solution
 ```
 make kursach.out
 ```
-To create optimised and non-optimised executables(object files are removed after linkink)
+To create optimised and non-optimised executables(object files are removed after linking)
 ```
 make / make all
 ```
@@ -34,7 +34,7 @@ By default there is no output, but ```gitFibNum()``` function actually returns v
 
 Both executables runs ```getFibNum()``` in cycle from 0 to 40. It is made to show comparison resaults.
 
-### Unreacheble values
+### Unreachable values
 
 By now type for numbers is ```long long```(```long long int```) and according to tests can only reach 92nd Fibanacci's number.
 
