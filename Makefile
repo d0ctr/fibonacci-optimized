@@ -15,9 +15,8 @@ softclean:
 	rm -rf *.o
 
 compare:
-	time ./$(PROJ)
-	echo
-	time ./$(TEST)
+	time --portability  ./$(PROJ)
+	time -p ./$(TEST)
 
 clean:
 	rm -rf *.o $(PROJ) $(TEST)
