@@ -19,7 +19,7 @@ long long getFibNum(const int index)
 
 int main()
 {
-  int num = 92;
+  int num = 40;
   for(int i = 0; i <= num; i++)
   {
     getFibNum(i);

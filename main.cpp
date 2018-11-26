@@ -27,7 +27,7 @@ FibanaciNumber getFibNum(const int index, FibanaciRow &fibcollection)
 int main()
 {
   FibanaciRow a;
-  int num = 92;
+  int num = 40;
   for(int i = 0; i <= num; i++)
   {
     getFibNum(i, a);
