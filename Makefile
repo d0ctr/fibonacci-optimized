@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-std=c++11 -Wall -Wextra -O0
-PROJ=kursach
-TEST=compare-kursach
+PROJ=kursach.out
+TEST=compare-kursach.out
 
 all: clean $(PROJ) $(TEST) softclean
 
@@ -17,6 +17,6 @@ softclean:
 compare:
 	time ./$(PROJ)
 	time ./$(TEST)
-	
+
 clean:
 	rm -rf *.o $(PROJ) $(TEST)
