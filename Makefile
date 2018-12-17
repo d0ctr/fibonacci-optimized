@@ -8,13 +8,14 @@ $(PROJ):
 	$(CC) $(CFLAGS) -O0 main.cpp handler.cpp fibanacirow.cpp -o $(PROJ)
 
 test:
-	./kursach.out
-	echo "find 10"
-	echo "show_row all"
-	echo "find -10"
-	echo "show_row all"
-	echo "clear"
-	echo "show_row"
+	touch ./testfile
+	echo "find 7" > testfile
+	echo "show_row all" >> testfile
+	echo "find -10" >> testfile
+	echo "show_row all" >> testfile
+	echo "clear" >> testfile
+	echo "show_row all" >> testfile
+	./kursach.out < testfile
 
 softclean:
 	rm -rf *.o

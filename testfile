@@ -1,0 +1,6 @@
+find 7
+show_row all
+find -10
+show_row all
+clear
+show_row all
