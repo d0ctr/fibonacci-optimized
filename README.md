@@ -43,11 +43,3 @@ By now type for numbers is ```long long```(```long long int```) and according to
 
 Find a way to get for 150th Fibanacci's number.(highest is 93rd reached with ```unsigned long long```)(string calculator???)
 
-## Made for users
-
-Create user's text-based interface with commands that return requested numbers, row(known row, row to requested index and row from one position to other)
-
-## Get signed
-
-Modernize function to get numbers from negative indexes
-
