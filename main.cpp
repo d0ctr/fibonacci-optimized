@@ -66,7 +66,7 @@ int main()
       }
       else
       {
-        std::invalid_argument("");
+        throw std::invalid_argument("");
       }
     }
     catch(std::invalid_argument &)
