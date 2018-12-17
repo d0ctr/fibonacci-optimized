@@ -28,8 +28,6 @@ int main()
           int start = HUI::readNum(input);
           input.ignore();
           int stop = HUI::readNum(input);
-          //HUI::checkIndex(start);
-          //HUI::checkIndex(stop);
           HUI::getRow(start, stop, memory);
         }
         else if(std::isalpha(input.peek()))
