@@ -15,7 +15,7 @@ To create object and executable files for the optimesed recursive solution
 ```
 make kursach.out
 ```
-To create optimised and non-optimised executables(object files are removed after linking)
+To create optimised executable(object files are removed after linking)
 ```
 make / make all
 ```
@@ -23,9 +23,9 @@ To delete all, but source files
 ```
 make clean
 ```
-To compare time of optimised and non-optimised executables(non-optimised, is actually compiled with ```-O3``` optimisation level)
+To execute compiled program
 ```
-make compare
+make test
 ```
 
 ### Defaults
