@@ -9,13 +9,12 @@ $(PROJ):
 
 test:
 	./kursach.out
-##	echo "find 10"
-##	echo "show_row all"
-##	echo "find -10"
-##	echo "show_row all"
-##	echo "clear"
-##	echo "show_row"
-##	echo "^M"
+	echo "find 10"
+	echo "show_row all"
+	echo "find -10"
+	echo "show_row all"
+	echo "clear"
+	echo "show_row"
 
 softclean:
 	rm -rf *.o
