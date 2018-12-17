@@ -1,22 +1,24 @@
 CC=g++
 CFLAGS=-std=c++11 -Wall -Wextra
 PROJ=kursach.out
-TEST=compare-kursach.out
 
-all: clean $(PROJ) $(TEST) softclean
+all: clean $(PROJ) softclean
 
 $(PROJ):
-	$(CC) $(CFLAGS) -O0 main.cpp fibanacirow.cpp -o $(PROJ)
+	$(CC) $(CFLAGS) -O0 main.cpp handler.cpp fibanacirow.cpp -o $(PROJ)
 
-$(TEST):
-	$(CC) $(CFLAGS) -O3 compare_main.cpp -o $(TEST)
+test:
+	./kursach.out
+##	echo "find 10"
+##	echo "show_row all"
+##	echo "find -10"
+##	echo "show_row all"
+##	echo "clear"
+##	echo "show_row"
+##	echo "^M"
 
 softclean:
 	rm -rf *.o
 
-compare:
-	time --portability  ./$(PROJ)
-	time -p ./$(TEST)
-
 clean:
-	rm -rf *.o $(PROJ) $(TEST)
+	rm -rf *.o $(PROJ)

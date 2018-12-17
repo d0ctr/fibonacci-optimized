@@ -51,16 +51,23 @@ void FibanaciRow::push(const FibanaciNumber &elem)
     min_index_ = elem.index;
   }
 }
-void FibanaciRow::pop_all()
+void FibanaciRow::pop_all_void()
 {
   while(!row_.empty())
   {
-    FibanaciNumber elem = pop(true);
-    std::cout << "(" << elem.index <<")" << elem.number << " ";
+    pop(true);
+  }
+}
+void FibanaciRow::pop_all_returning()
+{
+  while(!row_.empty())
+  {
+    FibanaciNumber elem = pop(false);
+    std::cout << elem.number << " ";
   }
   std::cout << std::endl;
 }
-bool FibanaciRow::ispresent(const int &index)
+bool FibanaciRow::ispresent(const int &index) const
 {
   if(collection_.count(index) > 0)
   {
@@ -68,11 +75,55 @@ bool FibanaciRow::ispresent(const int &index)
   }
   return false;
 }
-long long FibanaciRow::getNumber(const int &index)
+void FibanaciRow::deleteElem(const int &index)
 {
-  return *collection_[index];
+  if(index == max_index_)
+  {
+    pop(true);
+    return;
+  }
+  if(index == min_index_)
+  {
+    pop(false);
+    return;
+  }
+  collection_.erase(index);
 }
-long long FibanaciRow::getNumber()
+int FibanaciRow::getMaxIndex() const
 {
-  return *collection_[max_index_];
+  return max_index_;
+}
+int FibanaciRow::getMinIndex() const
+{
+  return min_index_;
+}
+FibanaciNumber FibanaciRow::getNumber(const int &index)
+{
+  long long res;
+  if(index == 0)
+  {
+    res = 0;
+  }
+  else if(index == 1)
+  {
+    res = 1;
+  }
+  else if(ispresent(index))
+  {
+    res = *collection_[index];
+  }
+  else if(index > 0)
+  {
+    res = getNumber(index - 1).number + getNumber(index - 2).number;
+  }
+  else
+  {
+    res = getNumber(index + 2).number - getNumber(index + 1).number;
+  }
+  push(FibanaciNumber {index, res});
+  return {index, res};
+}
+bool FibanaciRow::empty()
+{
+  return row_.empty();
 }
