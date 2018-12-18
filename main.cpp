@@ -69,9 +69,9 @@ int main()
         throw std::invalid_argument("");
       }
     }
-    catch(std::invalid_argument &)
+    catch(std::invalid_argument &e)
     {
-      std::cout << "<INVALID COMMAND>" << std::endl;
+      std::cout << e.what() << std::endl;
     }
   }
   return 0;
