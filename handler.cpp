@@ -50,7 +50,7 @@ void HUI::checkIndex(const int &index)
 {
   if((index >= 92) or (index <= -92))
   {
-    throw std::invalid_argument("<INVALID INDEX VALUE>");
+    throw std::invalid_argument("<UNREACHABLE VALUE>");
   }
 }
 int HUI::readNum(std::istream &input)
