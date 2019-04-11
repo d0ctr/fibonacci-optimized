@@ -13,7 +13,7 @@ To solve time issue I decided to create local indexed row of Fibanacci's numbers
 To create object and executable files for the optimesed recursive solution
 
 ```
-make kursach.out
+make fib.out
 ```
 To create optimised executable(object files are removed after linking)
 ```
