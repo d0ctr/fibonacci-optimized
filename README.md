@@ -6,7 +6,7 @@ The tiniest way to get Fibanacci's number by the index is recursive functions bu
 
 To solve time issue I decided to create local indexed row of Fibanacci's numbers. Right after function enters base it adds new values to the ```std::list<long long>``` container which iterators are the ```this.second``` of ```std::map<int, std::list<long long>::iterator>```. Before pushing new value ```map``` is checked for elements that have the same index(and new value is not pushed if there is such).
 
-## Details to now at the start
+# First steps
 
 ### Makefile instructions
 
