@@ -3,15 +3,15 @@
 
 #include <list>
 #include <sstream>
-#include "fibanacirow.hpp"
+#include "fibonaccirow.hpp"
 namespace HUI
 {
-  long long find(const int &index, FibanaciRow &collection);
-  void getRow(const int &start, const int &finish, FibanaciRow &collection);
-  void getFullRow(const bool clear, FibanaciRow &collection);
-  long long getMax(FibanaciRow &collection);
-  long long getMin(FibanaciRow &collection);
-  void clear(FibanaciRow &collection);
+  long long find(const int &index, FibonacciRow &collection);
+  void getRow(const int &start, const int &finish, FibonacciRow &collection);
+  void getFullRow(const bool clear, FibonacciRow &collection);
+  long long getMax(FibonacciRow &collection);
+  long long getMin(FibonacciRow &collection);
+  void clear(FibonacciRow &collection);
   int readNum(std::istream &input);
   void checkIndex(const int &index);
 }

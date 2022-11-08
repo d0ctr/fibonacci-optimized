@@ -4,7 +4,7 @@
 
 int main()
 {
-  FibanaciRow memory;
+  FibonacciRow memory;
   std::string string;
   while(std::getline(std::cin, string))
   {

@@ -5,7 +5,7 @@ PROJ=fib.out
 all: clean $(PROJ) softclean
 
 $(PROJ):
-	$(CC) $(CFLAGS) -O0 main.cpp handler.cpp fibanacirow.cpp -o $(PROJ)
+	$(CC) $(CFLAGS) -O0 main.cpp handler.cpp fibonaccirow.cpp -o $(PROJ)
 
 test:
 	echo "find 7" > testfile

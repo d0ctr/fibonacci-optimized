@@ -1,11 +1,11 @@
 #include <iostream>
 #include "handler.hpp"
 
-long long HUI::find(const int &index, FibanaciRow &collection)
+long long HUI::find(const int &index, FibonacciRow &collection)
 {
   return collection.getNumber(index).number;
 }
-void HUI::getRow(const int &start, const int &finish, FibanaciRow &collection)
+void HUI::getRow(const int &start, const int &finish, FibonacciRow &collection)
 {
   for(int i = start; i <= finish; i++)
   {
@@ -14,7 +14,7 @@ void HUI::getRow(const int &start, const int &finish, FibanaciRow &collection)
   }
   std::cout << std::endl;
 }
-void HUI::getFullRow(const bool clear, FibanaciRow &collection)
+void HUI::getFullRow(const bool clear, FibonacciRow &collection)
 {
   if(collection.empty())
   {
@@ -34,15 +34,15 @@ void HUI::getFullRow(const bool clear, FibanaciRow &collection)
     std::cout << std::endl;
   }
 }
-long long HUI::getMax(FibanaciRow &collection)
+long long HUI::getMax(FibonacciRow &collection)
 {
   return collection.getNumber(collection.getMaxIndex()).number;
 }
-long long HUI::getMin(FibanaciRow &collection)
+long long HUI::getMin(FibonacciRow &collection)
 {
   return collection.getNumber(collection.getMinIndex()).number;
 }
-void HUI::clear(FibanaciRow &collection)
+void HUI::clear(FibonacciRow &collection)
 {
   collection.pop_all_void();
 }

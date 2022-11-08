@@ -1,7 +1,7 @@
 #include <iostream>
-#include "fibanacirow.hpp"
+#include "fibonaccirow.hpp"
 
-FibanaciRow::FibanaciRow()
+FibonacciRow::FibonacciRow()
 {
   row_.push_front(0);
   collection_.emplace(0, row_.begin());
@@ -10,11 +10,11 @@ FibanaciRow::FibanaciRow()
   max_index_ = 1;
   min_index_ = 0;
 }
-FibanaciNumber FibanaciRow::pop(const bool positive)
+FibonacciNumber FibonacciRow::pop(const bool positive)
 {
   if(positive && (max_index_ >= 0))
   {
-    FibanaciNumber elem = {max_index_, row_.front()};
+    FibonacciNumber elem = {max_index_, row_.front()};
     row_.pop_front();
     collection_.erase(elem.index);
     max_index_--;
@@ -22,14 +22,14 @@ FibanaciNumber FibanaciRow::pop(const bool positive)
   }
   else
   {
-    FibanaciNumber elem = {min_index_, row_.back()};
+    FibonacciNumber elem = {min_index_, row_.back()};
     row_.pop_back();
     collection_.erase(elem.index);
     min_index_++;
     return elem;
   }
 }
-void FibanaciRow::push(const FibanaciNumber &elem)
+void FibonacciRow::push(const FibonacciNumber &elem)
 {
   for(auto i : collection_)
   {
@@ -51,23 +51,23 @@ void FibanaciRow::push(const FibanaciNumber &elem)
     min_index_ = elem.index;
   }
 }
-void FibanaciRow::pop_all_void()
+void FibonacciRow::pop_all_void()
 {
   while(!row_.empty())
   {
     pop(true);
   }
 }
-void FibanaciRow::pop_all_returning()
+void FibonacciRow::pop_all_returning()
 {
   while(!row_.empty())
   {
-    FibanaciNumber elem = pop(false);
+    FibonacciNumber elem = pop(false);
     std::cout << elem.number << " ";
   }
   std::cout << std::endl;
 }
-bool FibanaciRow::ispresent(const int &index) const
+bool FibonacciRow::ispresent(const int &index) const
 {
   if(collection_.count(index) > 0)
   {
@@ -75,7 +75,7 @@ bool FibanaciRow::ispresent(const int &index) const
   }
   return false;
 }
-void FibanaciRow::deleteElem(const int &index)
+void FibonacciRow::deleteElem(const int &index)
 {
   if(index == max_index_)
   {
@@ -89,15 +89,15 @@ void FibanaciRow::deleteElem(const int &index)
   }
   collection_.erase(index);
 }
-int FibanaciRow::getMaxIndex() const
+int FibonacciRow::getMaxIndex() const
 {
   return max_index_;
 }
-int FibanaciRow::getMinIndex() const
+int FibonacciRow::getMinIndex() const
 {
   return min_index_;
 }
-FibanaciNumber FibanaciRow::getNumber(const int &index)
+FibonacciNumber FibonacciRow::getNumber(const int &index)
 {
   long long res;
   if(index == 0)
@@ -120,10 +120,10 @@ FibanaciNumber FibanaciRow::getNumber(const int &index)
   {
     res = getNumber(index + 2).number - getNumber(index + 1).number;
   }
-  push(FibanaciNumber {index, res});
+  push(FibonacciNumber {index, res});
   return {index, res};
 }
-bool FibanaciRow::empty()
+bool FibonacciRow::empty()
 {
   return row_.empty();
 }

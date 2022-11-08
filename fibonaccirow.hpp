@@ -1,27 +1,27 @@
-#ifndef FIBANACIROW_HPP
-#define FIBANACIROW_HPP
+#ifndef FIBONACCIROW_HPP
+#define FIBONACCIROW_HPP
 #include <list>
 #include <map>
 
-struct FibanaciNumber
+struct FibonacciNumber
 {
   int index;
   long long number;
 };
-class FibanaciRow
+class FibonacciRow
 {
 public:
   using collection_type = std::map<int, std::list<long long>::iterator>;
   using row_type = std::list<long long>;
-  FibanaciRow();
-  ~FibanaciRow() = default;
+  FibonacciRow();
+  ~FibonacciRow() = default;
   void pop_all_returning();
   void pop_all_void();
-  FibanaciNumber pop(const bool positive);
-  void push(const FibanaciNumber &elem);
+  FibonacciNumber pop(const bool positive);
+  void push(const FibonacciNumber &elem);
   bool ispresent(const int &index) const;
   void deleteElem(const int &index);
-  FibanaciNumber getNumber(const int &index);
+  FibonacciNumber getNumber(const int &index);
   int getMaxIndex() const;
   int getMinIndex() const;
   bool empty();

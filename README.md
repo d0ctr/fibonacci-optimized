@@ -30,7 +30,7 @@ make test
 
 ### Defaults
 
-By default there is no output, but ```getFibNum()``` function actually returns values of ```FibanaciNumber``` structure.
+By default there is no output, but ```getFibNum()``` function actually returns values of ```FibonacciNumber``` structure.
 
 Both executables runs ```getFibNum()``` in cycle from 0 to 40. It is made to show comparison resaults.
 
