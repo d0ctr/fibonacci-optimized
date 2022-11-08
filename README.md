@@ -1,4 +1,4 @@
-# Optimized recursive way to get Fibanacci's numbers
+# Optimized recursive way to get Fibonacci's numbers
 
 The tiniest way to get Fibanacci's number by the index is recursive functions but also it is very time consuming even with the highest level of optimisation.
 
